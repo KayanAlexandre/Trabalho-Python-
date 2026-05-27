@@ -1,0 +1,22 @@
+import tkinter as tk
+janela = tk.Tk()
+janela.title("Contador de Texto")
+texto = tk.Text(janela)
+texto.pack()
+label_caracteres = tk.Label(janela, text="Caracteres: 0")
+label_caracteres.pack()
+label_palavras = tk.Label(janela, text="Palavras: 0")
+label_palavras.pack()
+label_linhas = tk.Label(janela, text="Linhas: 0")
+label_linhas.pack()
+def atualizar_contagem(event=None):
+    conteudo = texto.get("1.0", "end-1c")
+    caracteres = len(conteudo)
+    palavras = len(conteudo.split())
+    linhas = len(conteudo.splitlines())
+    label_caracteres.config(text=f"Caracteres: {caracteres}")
+    label_palavras.config(text=f"Palavras: {palavras}")
+
+    label_linhas.config(text=f"Linhas: {linhas}")
+texto.bind("<KeyRelease>", atualizar_contagem)
+janela.mainloop()

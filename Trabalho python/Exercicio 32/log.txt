@@ -1,0 +1,5 @@
+Valor inválido na linha: produto,valor
+
+Valor inválido na linha: Teclado,abc
+
+Valor inválido na linha: Notebook,

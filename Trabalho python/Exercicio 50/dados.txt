@@ -1,0 +1,3 @@
+João, joao@gmail.com
+Maria, maria@gmail.com
+Pedro, pedro@gmail.com
